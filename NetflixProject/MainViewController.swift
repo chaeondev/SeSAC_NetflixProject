@@ -19,7 +19,7 @@ class MainViewController: UIViewController {
     
     let bottomView = {
         let view = UIView()
-        view.backgroundColor = .brown
+        view.backgroundColor = .black
         return view
     }()
     
@@ -86,8 +86,15 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         setupConstraints()
+        netflixButton.addTarget(self, action: #selector(netflixButtonClicked), for: .touchUpInside)
         
         
+    }
+    
+    @objc func netflixButtonClicked() {
+        let vc = LoginViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
 
 
