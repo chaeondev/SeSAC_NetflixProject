@@ -59,6 +59,14 @@ class LoginViewController: UIViewController {
         return view
     }()
     
+    let checkLabel = {
+        let view = UILabel()
+        view.font = .boldSystemFont(ofSize: 15)
+        view.textColor = .red
+        view.text = "비밀번호를 올바르게 입력해주시길 바랍니다."
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
@@ -76,6 +84,7 @@ class LoginViewController: UIViewController {
         view.addSubview(locationTextField)
         view.addSubview(codeTextField)
         view.addSubview(signButton)
+        view.addSubview(checkLabel)
     }
     
     func setConstraints() {
@@ -117,6 +126,11 @@ class LoginViewController: UIViewController {
             make.top.equalTo(codeTextField.snp.bottom).offset(16)
             make.horizontalEdges.equalToSuperview().inset(30)
             make.height.equalTo(50)
+        }
+        
+        checkLabel.snp.makeConstraints { make in
+            make.top.equalTo(signButton.snp.bottom).offset(24)
+            make.horizontalEdges.equalToSuperview().inset(30)
         }
         
     }
