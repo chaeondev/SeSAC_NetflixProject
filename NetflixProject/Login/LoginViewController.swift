@@ -63,9 +63,11 @@ class LoginViewController: UIViewController {
         let view = UILabel()
         view.font = .boldSystemFont(ofSize: 15)
         view.textColor = .red
-        view.text = "비밀번호를 올바르게 입력해주시길 바랍니다."
+        view.numberOfLines = 0
         return view
     }()
+    
+    var viewModel = LoginViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +75,72 @@ class LoginViewController: UIViewController {
         
         configure()
         setConstraints()
+        
+        emailTextField.addTarget(self, action: #selector(emailTextFieldChanged), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(passwordTextFieldChanged), for: .editingChanged)
+        nicknameTextField.addTarget(self, action: #selector(nicknameTextFieldChanged), for: .editingChanged)
+        locationTextField.addTarget(self, action: #selector(locationTextFieldChanged), for: .editingChanged)
+        codeTextField.addTarget(self, action: #selector(codeTextFieldChanged), for: .editingChanged)
+        
+        signButton.addTarget(self, action: #selector(signButtonClicked), for: .touchUpInside)
+        
+        bindData()
+        
+    }
+    
+    @objc func emailTextFieldChanged() {
+        viewModel.email.value = emailTextField.text!
+        viewModel.checkValidation()
+    }
+    @objc func passwordTextFieldChanged() {
+        viewModel.pw.value = passwordTextField.text!
+        viewModel.checkValidation()
+    }
+    @objc func nicknameTextFieldChanged() {
+        viewModel.nickname.value = nicknameTextField.text!
+        viewModel.checkValidation()
+    }
+    @objc func locationTextFieldChanged() {
+        viewModel.location.value = locationTextField.text!
+        viewModel.checkValidation()
+    }
+    @objc func codeTextFieldChanged() {
+        viewModel.code.value = codeTextField.text!
+        viewModel.checkValidation()
+    }
+    @objc func signButtonClicked() {
+        
+    }
+    
+    func bindData() {
+        viewModel.email.bind { text in
+            self.emailTextField.text = text
+        }
+        
+        viewModel.pw.bind { text in
+            self.passwordTextField.text = text
+        }
+        
+        viewModel.nickname.bind { text in
+            self.nicknameTextField.text = text
+        }
+        
+        viewModel.location.bind { text in
+            self.locationTextField.text = text
+        }
+        
+        viewModel.code.bind { text in
+            self.codeTextField.text = text
+        }
+        
+        viewModel.checkLabel.bind { text in
+            self.checkLabel.text = text
+        }
+        
+        viewModel.isValid.bind { bool in
+            self.signButton.isEnabled = bool
+            self.signButton.backgroundColor = bool ? .white : .gray
+        }
         
     }
     

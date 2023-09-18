@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DE7318742AB8CEB60033EBC0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7318732AB8CEB60033EBC0 /* LoginViewController.swift */; };
 		DE7318792AB8D1A20033EBC0 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7318782AB8D1A20033EBC0 /* LoginTextField.swift */; };
+		DE73187C2AB8E1660033EBC0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE73187B2AB8E1660033EBC0 /* LoginViewModel.swift */; };
+		DE73187E2AB8E1B70033EBC0 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE73187D2AB8E1B70033EBC0 /* Observable.swift */; };
 		DEE070112A97410B00AC52E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE070102A97410B00AC52E9 /* AppDelegate.swift */; };
 		DEE070132A97410B00AC52E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE070122A97410B00AC52E9 /* SceneDelegate.swift */; };
 		DEE070152A97410B00AC52E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE070142A97410B00AC52E9 /* MainViewController.swift */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		DE7318732AB8CEB60033EBC0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DE7318782AB8D1A20033EBC0 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		DE73187B2AB8E1660033EBC0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		DE73187D2AB8E1B70033EBC0 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		DEE0700D2A97410B00AC52E9 /* NetflixProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE070102A97410B00AC52E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEE070122A97410B00AC52E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE73187A2AB8E14D0033EBC0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DE7318732AB8CEB60033EBC0 /* LoginViewController.swift */,
+				DE73187B2AB8E1660033EBC0 /* LoginViewModel.swift */,
+				DE73187D2AB8E1B70033EBC0 /* Observable.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		DEE070042A97410B00AC52E9 = {
 			isa = PBXGroup;
 			children = (
@@ -64,11 +78,11 @@
 		DEE0700F2A97410B00AC52E9 /* NetflixProject */ = {
 			isa = PBXGroup;
 			children = (
+				DE73187A2AB8E14D0033EBC0 /* Login */,
 				DEE070242A97475100AC52E9 /* CustomClass */,
 				DEE070102A97410B00AC52E9 /* AppDelegate.swift */,
 				DEE070122A97410B00AC52E9 /* SceneDelegate.swift */,
 				DEE070142A97410B00AC52E9 /* MainViewController.swift */,
-				DE7318732AB8CEB60033EBC0 /* LoginViewController.swift */,
 				DEE070192A97410C00AC52E9 /* Assets.xcassets */,
 				DEE0701B2A97410C00AC52E9 /* LaunchScreen.storyboard */,
 				DEE0701E2A97410C00AC52E9 /* Info.plist */,
@@ -166,6 +180,8 @@
 				DE7318742AB8CEB60033EBC0 /* LoginViewController.swift in Sources */,
 				DEE070152A97410B00AC52E9 /* MainViewController.swift in Sources */,
 				DEE070262A9747F400AC52E9 /* ContentsListButton.swift in Sources */,
+				DE73187E2AB8E1B70033EBC0 /* Observable.swift in Sources */,
+				DE73187C2AB8E1660033EBC0 /* LoginViewModel.swift in Sources */,
 				DEE070282A97480A00AC52E9 /* PreviewImageView.swift in Sources */,
 				DEE070112A97410B00AC52E9 /* AppDelegate.swift in Sources */,
 				DEE070132A97410B00AC52E9 /* SceneDelegate.swift in Sources */,
